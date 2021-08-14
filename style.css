@@ -1,0 +1,203 @@
+/*              #########       COMMON STYLING     ########               */
+body,footer{
+    background-color: beige;
+}
+/* Working on Navbar*/
+.navbar {
+    /*background-color: linear-gradient(to bottom, #7AA1D2, #DBD4B4, #CC95C0);*/
+    display: flex;
+    align-items: center;
+}
+.navbar a{
+    color: black;
+    background-color: beige;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+.navbar ul li{
+    padding: 20px;
+    display: block;
+}
+
+/* Assigning the fonts to the tags*/
+
+h1,h1,h3,h4,h5{
+    font-family: 'Press Start 2P', cursive;
+}
+
+p,a, li, strong{
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+}
+/* Adding style to the link and the end of index page*/
+a{
+    background-color: white;
+    color: black;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/*              #########       INDEX.HTML STYLING     ########               */
+.s1{
+    /*border: 2px solid red;*/
+    padding: 50px;
+    /*background: -webkit-linear-gradient(to left, #e6dada, #274046); /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to left, #e6dada, #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: -webkit-linear-gradient(to bottom, #e6dada, #274046); /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, #e6dada, #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to bottom, #99a1aa, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-bottom: 3px solid #CC95C0;
+}
+
+.s2{
+    /*border: 2px solid blue;*/
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.squid-img-frame {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #ccc;
+    background: #eee;
+    margin: auto;
+    padding: 15px 10px;
+  }
+  
+.s3{
+    /*border: 2px solid yellow;*/
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+
+    background: -webkit-linear-gradient(to top, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-bottom: 3px solid #CC95C0;
+
+}
+
+.co-name{
+   /* border: 1px solid blueviolet;*/
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.3em;
+
+}
+
+
+/*              #########      JOBS.HTML STYLING     ########               */
+.main-wrapper{
+    /*border: 2px solid green;*/
+    padding: 10px;
+    /*padding-left: 400px;*/
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'text-wrapper pos1-intro'
+    'text-wrapper pos2-intro'
+    'p1-eskills p1-des'
+    'p1-preskills p1-des'
+    'p2-des p2-eskills'
+    'p2-des p2-preskills' ;
+    grid-gap: 10px;
+    grid-row-gap: 20px;
+
+
+}
+.text-wrapper{
+    /*border: 2px solid yellow;*/
+    grid-area:text-wrapper;
+    padding: 50px;
+    background: #F0C27B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+
+}
+.hire-banner{
+    padding: 50px;
+}
+.p1-intro{
+    /*border: 2px solid black;*/
+    padding: 50px;
+    align-items: center;
+    grid-area: pos1-intro;
+    background:#eed6b2;
+
+
+}
+.p2-intro{
+    /*border: 2px solid blue;*/
+    padding: 50px;
+    grid-area: pos2-intro;
+    background:#eed6b2;
+}
+.p1-des{
+    padding: 50px;
+    grid-area: p1-des;
+    background: -webkit-linear-gradient(to top, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.p2-des{
+    grid-area: p2-des;
+    padding: 50px;
+    background: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.p1-eskills{
+    grid-area: p1-eskills;
+    padding: 50px;
+    background:#eed6b2;
+}
+.p1-preskills{
+    grid-area: p1-preskills;
+    padding: 50px;
+    background:#eed6b2;
+}
+.p2-eskills{
+    grid-area: p2-eskills;
+    padding: 50px;
+    background:#eed6b2
+}
+.p2-preskills{
+    grid-area:p2-preskills;
+    padding: 50px;
+    background:#eed6b2
+}
+
+.foot-wrapper{
+    align-content: center;
+    padding-bottom: 100px;
+    padding-left: 540px;
+}
+.apply-btn{
+    background-color: black;
+    color: beige;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.home-btn{
+    background-color: black;
+    color: beige;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+
