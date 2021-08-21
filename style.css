@@ -1,16 +1,25 @@
+
+:root{
+    /*Setting Variables for easier code-reuse and color changing*/
+    --mainGradient: linear-gradient(to bottom, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --fallBackGradient: -webkit-linear-gradient(to bottom, #99a1aa, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+    --pinkBorder: #CC95C0;
+    --secondaryGradient:linear-gradient(to top, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --secondaryFallbackG: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
+    --primary-bg:beige;
+    --secondary-bg:#eed6b2;
+
+
+}
 /*              #########       COMMON STYLING     ########               */
 body,footer{
-    background-color: beige;
+    background-color: var(--primary-bg);
 }
 /* Working on Navbar*/
-.navbar {
-    /*background-color: linear-gradient(to bottom, #7AA1D2, #DBD4B4, #CC95C0);*/
-    display: flex;
-    align-items: center;
-}
+
 .navbar a{
     color: black;
-    background-color: beige;
+    background-color: var(--primary-bg);
 }
 .navbar ul{
     display: flex;
@@ -20,14 +29,20 @@ body,footer{
     padding: 20px;
     display: block;
 }
+/*Change Navbar element color on hover*/
+nav a:hover{
+    background-color:#eed6b2;
+    transition: background-color .3s;
+}
+
 
 /* Assigning the fonts to the tags*/
 
-h1,h1,h3,h4,h5{
+h1,h1,h3,h4,h5,legend,option{
     font-family: 'Press Start 2P', cursive;
 }
 
-p,a, li, strong{
+p,a, li, strong,h6, dd, dl{
     font-family: 'VT323', monospace;
     font-size: 1.5em;
 }
@@ -45,13 +60,8 @@ a{
 .s1{
     /*border: 2px solid red;*/
     padding: 50px;
-    /*background: -webkit-linear-gradient(to left, #e6dada, #274046); /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to left, #e6dada, #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /*background: -webkit-linear-gradient(to bottom, #e6dada, #274046); /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to bottom, #e6dada, #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: -webkit-linear-gradient(to bottom, #99a1aa, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: var(--fallBackGradient);
+    background: var(--mainGradient);
     border-bottom: 3px solid #CC95C0;
 }
 
@@ -66,7 +76,8 @@ img{
     width: 100%;
     height: 100%;
 }
-.squid-img-frame {
+/* Keeping a Consistent Image Frame throughout website*/
+.img-frame {
     width: 300px;
     height: 300px;
     border: 3px solid #ccc;
@@ -81,9 +92,9 @@ img{
     padding: 50px;
     justify-content: space-between;
 
-    background: -webkit-linear-gradient(to top, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-bottom: 3px solid #CC95C0;
+    background: var(--fallBackGradient);
+    background: var(--mainGradient);
+    border-bottom: 3px solid var(--pinkBorder);
 
 }
 
@@ -96,6 +107,8 @@ img{
 
 
 /*              #########      JOBS.HTML STYLING     ########               */
+
+/*Using Grid Display to layout Jobs.html page.*/
 .main-wrapper{
     /*border: 2px solid green;*/
     padding: 10px;
@@ -117,19 +130,19 @@ img{
 }
 .text-wrapper{
     /*border: 2px solid yellow;*/
+    padding-top: 50px;
     grid-area:text-wrapper;
-    padding: 50px;
-    background: #F0C27B;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    padding: 100px; 
+    background: var(--secondaryFallbackG);
+    background: var(--secondaryGradient);
 
 }
-.hire-banner{
-    padding: 50px;
-}
+
 .p1-intro{
     /*border: 2px solid black;*/
     padding: 50px;
+    padding-top: 50px;
+    padding-left: 170px;
     align-items: center;
     grid-area: pos1-intro;
     background:#eed6b2;
@@ -140,20 +153,23 @@ img{
     /*border: 2px solid blue;*/
     padding: 50px;
     grid-area: pos2-intro;
+    padding-left: 170px;
+
     background:#eed6b2;
 }
 .p1-des{
     padding: 50px;
+    padding-top:130px;
     grid-area: p1-des;
-    background: -webkit-linear-gradient(to top, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: var(--secondaryFallbackG);
+    background: var(--secondaryGradient);
 }
 .p2-des{
     grid-area: p2-des;
     padding: 50px;
-    background: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    padding-top: 130px;
+    background: var(--secondaryFallbackG);
+    background: var(--secondaryGradient);
 }
 .p1-eskills{
     grid-area: p1-eskills;
@@ -176,28 +192,178 @@ img{
     background:#eed6b2
 }
 
-.foot-wrapper{
+/*footer{
     align-content: center;
     padding-bottom: 100px;
     padding-left: 540px;
-}
+}*/
 .apply-btn{
     background-color: black;
-    color: beige;
+    color: var(--primary-bg);
     padding: 0.5em 0.5em;
     text-decoration: none;
     text-transform: uppercase;
     padding-left: 100px;
     padding-right: 100px;
 }
-.home-btn{
+.home-btn,.submit-btn,.reset-btn{
     background-color: black;
-    color: beige;
+    color: var(--primary-bg);
     padding: 0.5em 0.5em;
     text-decoration: none;
     text-transform: uppercase;
     padding-left: 110px;
     padding-right: 110px;
 }
+.jobs-btn-wrapper{
+    padding: 50px;
+
+    display: flex;
+    justify-content: center;
+
+}
 
 
+/* ############ APPLY.HTML SYLING #############*/
+label{
+    line-height: 2.7em;
+}
+input{
+    line-height: 2.7em;
+    background:#eed6b2 ;
+}
+
+.mega-intro:hover{
+    font-size: 1.5em;
+    transition: font-size .8s;
+}
+.form-main{
+
+    background: var(--mainGradient);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    'job-details job-details'
+    'personal-details address-details'
+    'skill-details contact-details'
+    ;
+    grid-gap: 10px;
+}
+legend:hover{
+    font-size: 1.5em;
+    transition: font-size .7s;
+}
+fieldset{
+    border: 2px solid #4B1248;
+}
+.job-details{
+    grid-area: job-details;
+    padding-top: 50px;
+ 
+}
+.personal-details{
+    grid-area:personal-details;
+}
+
+
+.address-details{
+    grid-area:address-details;
+
+}
+
+.contact-details{
+    grid-area:contact-details;
+}
+
+.skill-details{
+    grid-area: skill-details;
+
+}
+.page-btn-wrapper{
+    padding: 50px;
+
+    display: flex;
+    justify-content: center;
+    background-color: #CC95C0;
+}
+.submit-btn{
+    display: block;
+    float: right;
+}
+.submit-btn:hover{
+    background-color: darkgreen;
+    transition: background-color .7s;
+}
+.reset-btn:hover{
+    background-color: darkred;
+    transition: background-color .7s;
+}
+
+/*###### STYLING ABOUT ME PAGE########*/
+.about-main{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+}
+.about-main:hover{
+    padding:50px;
+    transition: padding .7s;
+}
+.info-wrapper{
+    padding: 50px;
+}
+.info-wrapper dd,dl{
+    font-size: 1.2em;
+}
+.info-wrapper:hover{
+    background-color: #eed6b2;
+    transition: background-color .7s;
+}
+.ceo-wrapper{
+    background-color: #eed6b2;
+    transition: background-color .7s;
+    padding: 50px;
+}
+.timetable{
+    padding: 50px;
+    padding-left: 200px;
+}
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+tr,td{
+    border: 2px solid black;
+    padding: 20px;
+}
+tr:hover{
+    background-color: #7AA1D2;
+    transition: background-color .5s;
+}
+td:hover{
+    background-color: #CC95C0;
+    transition: background-color .5s;
+}
+
+/* FOOTER FOR ALL PAGE STYLING*/
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer ul li{
+    padding: 20px;
+    padding-top: 50px;
+    display: block;
+}
+/*Color for About Page Footer*/
+.about-footer{
+    background-color:#eed6b2;
+}

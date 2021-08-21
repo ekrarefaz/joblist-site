@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
         <!--Linking my css file. Keep in same folder for it to work-->
         <link rel="stylesheet" type="text/css" href="style.css">
         <!--Adding fonts from google fonts-->
@@ -16,36 +17,39 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
-        <title>JOBS</title>
+        <title>Job Lisitings</title>
     </head>
+    <body>
     <header>
+        <!-- Navbar-->
         <nav class="navbar">
              <ul>
                  <li>
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
                 </li>
                 <li>
-                <a href="#">Jobs</a>
+                <a href="jobs.html">Jobs</a>
                 </li>
                 <li>
-                <a href="#">AboutMe</a>
+                <a href="about.html">AboutMe</a>
                 </li>
                 <li>
                 <a href="#">Enhancements</a>
                 </li>
                 <li>
-                <a href="#">Apply</a>
+                <a href="apply.html">Apply</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <body>
         <div class="main-wrapper">
             <section class="text-wrapper">
-                <h1 class="hire-banner">We are Hiring !</h1>
+                <h1>We are Hiring !</h1>
                 <h4>Check out our openings</h4>
                 <p>Currently there are two vacant positions we're looking to fill.<br>Passionate and team-oriented individuals are welcome to apply</p>
-                <p>We have offices at 3 Locations around the world. These openings are for <em>Sweden</em> and <em>Australian</em> offices only.<br>Our Office in <em>Australia</em> is situated in the stunning city of <em>Melbourne.</em><br>and for Sweden we are in the cosmopolitan city <em>Sundsvall</em></p>
+                <h5>Our Location</h5>
+                <p>We have offices at 3 Locations around the world.Our Office in <em>Australia</em> is situated in the stunning city of <em>Melbourne.</em><br>and for Sweden we are in the cosmopolitan city <em>Sundsvall</em></p>
+                <p> **These openings are for <em>Sweden</em> and <em>Australian</em> offices only.</p>
             </section>
         
             <section class="p1-intro">
@@ -54,7 +58,7 @@
                 <p>Salary Range: 75k-100k AUD</p> 
                 <div>
                     <br>
-                    <a class="apply-btn" target="_blank"href="apply.html">Apply!</a>
+                    <a class="apply-btn" target="" href="apply.html">Apply!</a>
                 </div> 
             </section>
             <section class="p2-intro">
@@ -63,7 +67,7 @@
                 <p>Salary Range: 70k-80k AUD</p>
                 <div>
                     <br>
-                    <a class="apply-btn" target="_blank"href="apply.html">Apply!</a>
+                    <a class="apply-btn" target="" href="apply.html">Apply!</a>
                 </div>
             </section>
             <section class="p1-des">
@@ -94,7 +98,7 @@
                 </article>
             </section>
             <section class="p1-eskills">
-                <strong>Essential Skills</strong>
+                <h6>Essential Skills</h6>
                 <ol>
                     <li>Familliar with Cisco Proprietory Tools</li>
                     <li>Advanced understanding of Network Infrastucture</li>
@@ -103,7 +107,7 @@
                 </ol>
             </section>
             <section class="p1-preskills">
-                <strong>Preferred Skills</strong>
+                <h6>Preferred Skills</h6>
                 <ol>
                     <li>Basic Knowledge of Network Security i.e IDS,IPS,Firewall,Honeypotting etc</li>
                     <li>Understanding of network socket programming with python</li>
@@ -111,7 +115,7 @@
                 </ol>
             </section>
             <section class="p2-eskills">
-                <p><strong>Essential Skills</strong></p>
+                <h6>Essential Skills</h6>
                 <ol>
                     <li>Administrating Linux and Unix Servers</li>
                     <li>Monitoring System with and Configuring various opensource monitoring tools.</li>
@@ -120,7 +124,7 @@
                 </ol>
             </section>
             <section class="p2-preskills">
-                <p><strong>Preferred Skills</strong></p>
+                <h6>Preferred Skills</h6>
                 <ol>
                     <li>Vulnerability assesment</li>
                     <li>At least proeficient in C and shell scripting</li>
@@ -130,17 +134,27 @@
                 </ol>
             </section>
         </div>   
-    </body>
-            <footer class="foot-wrapper">
+            <div class="jobs-btn-wrapper">
                 <div>
                     <br>
-                    <a class="apply-btn" target="_blank"href="apply.html">Apply!</a>
+                    <a class="apply-btn" target="" href="apply.html">Apply!</a>
                 </div>
                 <br>
                 <div>
                     <br>
-                    <a class="home-btn" target="_blank"href="index.html">Home</a>
+                    <a class="home-btn" target="" href="index.html">Home</a>
                 </div>
-            </footer>
+            </div>
+                <footer class="jobs-footer">
+                    <ul>
+                        <li>&copy;2021 Shackdark Inc.</li>
+                        <li>Privacy</li>
+                        <li>Terms</li>
+                        <li>Login</li>
+                        <li>Job Listings</li>
+        
+                    </ul>
+                    
+                </footer>
     </body>
 </html>
