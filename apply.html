@@ -19,7 +19,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
         <title>Job Application</title>
     </head>
-    <body>
+    <body class="apply-pg-body">
     <header>
         <!-- Navbar-->
         <nav class="navbar">
@@ -83,7 +83,6 @@
                 </fieldset>
             </div>
             <div class="address-details">
-                <fieldset>
                     <legend>Address</legend>
                     <p>
                         <label for="street-address">Street Address</label>
@@ -112,11 +111,9 @@
                     </p>
                 
                     
-                </fieldset>
             </div>
             <div class="contact-details">
-                <fieldset>
-                
+				<fieldset>    
                     <legend>Additional Information</legend>
                     <p>
                         <label for="email">Email: </label>
@@ -126,23 +123,21 @@
                         <label for="phone">Phone Number: </label>
                         <input type="text" id="phone" name="phone" pattern="[0-9 ]{8,12}" required="required">
                     </p>
-                
-                </fieldset>
+				</fieldset>
             </div>      
             <div class="skill-details">  
-                <fieldset>
                 
                     <legend>Skills</legend>
-                    <input type="checkbox" id="programming" name="programming">
+                    <input type="checkbox" id="programming" name="programming" class="rcheck">
                     <label for="programming"> Programming</label>
 
-                    <input type="checkbox" id="Linux/Unix" name="linux/unix">
+                    <input type="checkbox" id="Linux/Unix" name="linux/unix" class="rcheck">
                     <label for="Linux/Unix"> Linux/Unix</label>
 
-                    <input type="checkbox" id="Networking" name="networking">
+                    <input type="checkbox" id="Networking" name="networking" class="rcheck">
                     <label for="Networking"> Networking</label>
 
-                    <input type="checkbox" id="Communication" name="communication">
+                    <input type="checkbox" id="Communication" name="communication" class="rcheck">
                     <label for="Communication"> Communication</label>
 
                     <p>
@@ -150,7 +145,6 @@
                         <br>
                         <textarea id="other-skills" name="other-skills" placeholder="List you additional skills here" rows="4" cols="33" required="required"></textarea>
                     </p> 
-                </fieldset>
             </div>
             </div>
             <div class="page-btn-wrapper">    

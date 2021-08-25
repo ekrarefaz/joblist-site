@@ -1,19 +1,32 @@
 
+/*
+COS10011 | Assignment 1 CSS File
+Author: Ekrar Uddin Mohammed Efaz (103494172)
+Styling for Home, Jobs, Apply, About Pages
+
+check comments for page specific styling.
+*/
 :root{
     /*Setting Variables for easier code-reuse and color changing*/
+
+    /*Pre-made Gradients from  https://uigradients.com*/
     --mainGradient: linear-gradient(to bottom, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     --fallBackGradient: -webkit-linear-gradient(to bottom, #99a1aa, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
-    --pinkBorder: #CC95C0;
+    /*Pre-made Gradients from  https://uigradients.com*/
     --secondaryGradient:linear-gradient(to top, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     --secondaryFallbackG: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
+    
     --primary-bg:beige;
     --secondary-bg:#eed6b2;
-
-
+    --pink-bg: #CC95C0;
+    --blue-bg: #7AA1D2;
 }
 /*              #########       COMMON STYLING     ########               */
+*{
+    box-sizing: border-box;
+}
 body,footer{
-    background-color: var(--primary-bg);
+    background-color: var(--primary-bg); 
 }
 /* Working on Navbar*/
 
@@ -31,50 +44,31 @@ body,footer{
 }
 /*Change Navbar element color on hover*/
 nav a:hover{
-    background-color:#eed6b2;
-    transition: background-color .3s;
+    /* background-color:#eed6b2;
+    transition: background-color .3s; */
+    border-bottom: 5px solid black;
+    transition: border-bottom .3s;
 }
 
 
 /* Assigning the fonts to the tags*/
 
+/*Font from Google Fonts https://fonts.google.com*/
 h1,h1,h3,h4,h5,legend,option{
     font-family: 'Press Start 2P', cursive;
 }
-
-p,a, li, strong,h6, dd, dl{
+/*Font from Google Fonts https://fonts.google.com*/
+p,a, li, strong,label, h6, dd, dl{
     font-family: 'VT323', monospace;
     font-size: 1.5em;
 }
-/* Adding style to the link and the end of index page*/
+/* Adding style to the link for menu and clickables*/
 a{
     background-color: white;
     color: black;
     padding: 0.5em 0.5em;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-
-/*              #########       INDEX.HTML STYLING     ########               */
-.s1{
-    /*border: 2px solid red;*/
-    padding: 50px;
-    background: var(--fallBackGradient);
-    background: var(--mainGradient);
-    border-bottom: 3px solid #CC95C0;
-}
-
-.s2{
-    /*border: 2px solid blue;*/
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-
-}
-img{
-    width: 100%;
-    height: 100%;
 }
 /* Keeping a Consistent Image Frame throughout website*/
 .img-frame {
@@ -84,8 +78,31 @@ img{
     background: #eee;
     margin: auto;
     padding: 15px 10px;
-  }
-  
+}
+
+
+                /*#########       INDEX.HTML STYLING     ########*/
+
+
+
+.s1{
+    /*border: 2px solid red;*/
+    padding: 50px;
+    background: var(--fallBackGradient);
+    background: var(--mainGradient);
+    
+}
+.s2{
+    /*border: 2px solid blue;*/
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-image: url("./bubbletown.webp");
+}
+img{
+    width: 100%;
+    height: 100%;
+}
 .s3{
     /*border: 2px solid yellow;*/
     display: flex;
@@ -95,9 +112,7 @@ img{
     background: var(--fallBackGradient);
     background: var(--mainGradient);
     border-bottom: 3px solid var(--pinkBorder);
-
 }
-
 .co-name{
    /* border: 1px solid blueviolet;*/
     font-family: 'Press Start 2P', cursive;
@@ -105,8 +120,9 @@ img{
 
 }
 
+                /*#########      JOBS.HTML STYLING     ######## */
 
-/*              #########      JOBS.HTML STYLING     ########               */
+
 
 /*Using Grid Display to layout Jobs.html page.*/
 .main-wrapper{
@@ -125,9 +141,8 @@ img{
     'p2-des p2-preskills' ;
     grid-gap: 10px;
     grid-row-gap: 20px;
-
-
 }
+/*setting grid area*/
 .text-wrapper{
     /*border: 2px solid yellow;*/
     padding-top: 50px;
@@ -135,9 +150,7 @@ img{
     padding: 100px; 
     background: var(--secondaryFallbackG);
     background: var(--secondaryGradient);
-
 }
-
 .p1-intro{
     /*border: 2px solid black;*/
     padding: 50px;
@@ -146,8 +159,6 @@ img{
     align-items: center;
     grid-area: pos1-intro;
     background:#eed6b2;
-
-
 }
 .p2-intro{
     /*border: 2px solid blue;*/
@@ -192,11 +203,32 @@ img{
     background:#eed6b2
 }
 
+.benefit-wrapper{
+    background: var(--secondary-bg);
+    width: 25%;
+    height: 25%;
+    padding: 50px;
+    margin: 10px;
+    display: block;
+    float: right;
+}
+.branches{
+    background: var(--secondary-bg);
+    width: 25%;
+    height: 25%;
+    margin: 10px;
+    padding:50px;
+    display: block;
+    float: center;
+}
+
 /*footer{
     align-content: center;
     padding-bottom: 100px;
     padding-left: 540px;
 }*/
+
+/*Common button styling*/
 .apply-btn{
     background-color: black;
     color: var(--primary-bg);
@@ -206,6 +238,7 @@ img{
     padding-left: 100px;
     padding-right: 100px;
 }
+/*Common button styling*/
 .home-btn,.submit-btn,.reset-btn{
     background-color: black;
     color: var(--primary-bg);
@@ -217,28 +250,33 @@ img{
 }
 .jobs-btn-wrapper{
     padding: 50px;
-
     display: flex;
     justify-content: center;
-
 }
+                /* ############ APPLY.HTML SYLING #############*/
 
 
-/* ############ APPLY.HTML SYLING #############*/
+
 label{
     line-height: 2.7em;
+    font-size: 1.3em;
 }
 input{
     line-height: 2.7em;
     background:#eed6b2 ;
 }
-
 .mega-intro:hover{
     font-size: 1.5em;
     transition: font-size .8s;
 }
+/*Making Grid Area template*/
+.apply-pg-body{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
 .form-main{
-
+    padding: 30px;
     background: var(--mainGradient);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -257,32 +295,27 @@ legend:hover{
 fieldset{
     border: 2px solid #4B1248;
 }
+/*Setting Grid Area*/
 .job-details{
     grid-area: job-details;
     padding-top: 50px;
- 
 }
 .personal-details{
     grid-area:personal-details;
 }
-
-
 .address-details{
     grid-area:address-details;
-
+	padding: 20px;
 }
-
 .contact-details{
     grid-area:contact-details;
 }
-
 .skill-details{
     grid-area: skill-details;
-
+	padding-left: 30px;
 }
 .page-btn-wrapper{
     padding: 50px;
-
     display: flex;
     justify-content: center;
     background-color: #CC95C0;
@@ -291,6 +324,7 @@ fieldset{
     display: block;
     float: right;
 }
+/*Giving Button on Hover style*/
 .submit-btn:hover{
     background-color: darkgreen;
     transition: background-color .7s;
@@ -300,11 +334,14 @@ fieldset{
     transition: background-color .7s;
 }
 
-/*###### STYLING ABOUT ME PAGE########*/
+                        /*###### STYLING ABOUT ME PAGE########*/
+
+
+
+
 .about-main{
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+
     justify-content: center;
     padding: 50px;
 }
@@ -312,14 +349,27 @@ fieldset{
     padding:50px;
     transition: padding .7s;
 }
+.img-wrapper{
+    padding-top: 50px;
+}
+
 .info-wrapper{
     padding: 50px;
+    background: var(--secondary-bg);
+}
+.mailto-btn{ 
+    width: 20px;
+    height: 20px;
+    font-size: 0.5em;
+}
+.mailto-btn a{
+    font-size: 0.5em;
 }
 .info-wrapper dd,dl{
     font-size: 1.2em;
 }
 .info-wrapper:hover{
-    background-color: #eed6b2;
+    background-color: var(--blue-bg);
     transition: background-color .7s;
 }
 .ceo-wrapper{
@@ -327,6 +377,7 @@ fieldset{
     transition: background-color .7s;
     padding: 50px;
 }
+/* Styling Time Table*/
 .timetable{
     padding: 50px;
     padding-left: 200px;
@@ -339,6 +390,10 @@ tr,td{
     border: 2px solid black;
     padding: 20px;
 }
+tr{
+    background: #DBC39A;
+}
+/*Change Color on Hover Table Element*/
 tr:hover{
     background-color: #7AA1D2;
     transition: background-color .5s;
