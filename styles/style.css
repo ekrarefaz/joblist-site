@@ -64,9 +64,6 @@ footer ul li{
     padding-top: 50px;
     display: block;
 }
-footer ul li a{
-    font-size: 1rem;
-}
 /*Color for About Page Footer*/
 .about-footer{
     background-color:#eed6b2;
@@ -119,7 +116,7 @@ a{
     display: flex;
     justify-content: space-around;
     padding: 50px;
-    background-image: url("../images/bottoms-bg2.jpg");
+    background-image: url("./bubbletown.webp");
 }
 img{
     width: 100%;
@@ -232,7 +229,6 @@ img{
     padding: 50px;
     margin: 10px;
     float: right;
-    clear: both;
 }
 .branches{
     background: var(--secondary-bg);
@@ -241,7 +237,6 @@ img{
     margin: 10px;
     padding:50px;
     float: left;
-    clear: both;
 }
 
 /*footer{

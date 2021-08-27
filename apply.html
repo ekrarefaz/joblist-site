@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <!--Linking my css file. Keep in same folder for it to work-->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="./styles/style.css">
         <!--Adding fonts from google fonts-->
         <!--FONT VT32-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
     <body class="apply-pg-body">
     <header>
         <!-- Navbar-->
-        <nav class="navbar">
+        <nav class="navbar apply-pg-navbar">
              <ul>
                  <li>
                 <a href="index.html">Home</a>
@@ -34,7 +34,7 @@
                 <a href="about.html">AboutMe</a>
                 </li>
                 <li>
-                <a href="#">Enhancements</a>
+                <a href="enhancements.html">Enhancements</a>
                 </li>
                 <li>
                 <a href="apply.html">Apply</a>
@@ -83,6 +83,7 @@
                 </fieldset>
             </div>
             <div class="address-details">
+                <fieldset>
                     <legend>Address</legend>
                     <p>
                         <label for="street-address">Street Address</label>
@@ -109,7 +110,7 @@
                             <option value="ACT">ACT</option>
                         </select>
                     </p>
-                
+                </fieldset>
                     
             </div>
             <div class="contact-details">
@@ -126,7 +127,7 @@
 				</fieldset>
             </div>      
             <div class="skill-details">  
-                
+            <fieldset>
                     <legend>Skills</legend>
                     <input type="checkbox" id="programming" name="programming" class="rcheck">
                     <label for="programming"> Programming</label>
@@ -145,6 +146,7 @@
                         <br>
                         <textarea id="other-skills" name="other-skills" placeholder="List you additional skills here" rows="4" cols="33" required="required"></textarea>
                     </p> 
+            </fieldset>
             </div>
             </div>
             <div class="page-btn-wrapper">    
@@ -157,14 +159,12 @@
             </div>
         
         <footer class="apply-footer">
-            <ul>
-                <li>&copy;2021 Shackdark Inc.</li>
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>Login</li>
-                <li>Job Listings</li>
-
-            </ul>
+                <ul>
+                    <li>&copy;2021 Shackdark Inc.</li>
+                    <li>Privacy</li>
+                    <li>Terms</li>
+                    <li>Aknowledgement: Gradient from <a href="https://uigradients.com">UIGRADIENTS</a></li>
+                </ul> 
             
         </footer>
     </form>
