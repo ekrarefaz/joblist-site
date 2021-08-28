@@ -410,7 +410,6 @@ fieldset{
 
 .about-main{
     display: flex;
-
     justify-content: center;
     padding: 50px;
 }
@@ -426,13 +425,20 @@ fieldset{
     padding: 50px;
     background: var(--secondary-bg);
 }
+.info-wrapper dl dd a{
+    font-size: 1rem;
+}
 .mailto-btn{ 
     width: 20px;
     height: 20px;
     font-size: 0.5em;
+    padding: 5%;
+    margin-left:10px;
+    
 }
 .mailto-btn a{
     font-size: 0.5em;
+    font-family: 'VT323', monospace;
 }
 .info-wrapper dd,dl{
     font-size: 1.2em;

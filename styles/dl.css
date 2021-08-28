@@ -1,0 +1,15 @@
+ /* styling definition list */
+ dl{
+  padding: 1em;
+  }
+  dt{
+  clear:right;
+  float: left;
+  text-align: right;
+  font-weight: bold;
+  color: black;
+  }
+  dd{
+  line-height:2em;
+  margin-left:100px;
+  }
