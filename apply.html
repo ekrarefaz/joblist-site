@@ -2,8 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="Assignment 1" />
+        <meta name="keywords" content="HTML, CSS" />
+        <meta name="author" content="s103494172"  />
         <!--Linking my css file. Keep in same folder for it to work-->
         <link rel="stylesheet" type="text/css" href="./styles/style.css">
+        <link rel="stylesheet" id="theme-style" href="">
         <!--Adding fonts from google fonts-->
         <!--FONT VT32-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +21,18 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+        <!-- Link to Javascripts -->
+        <script src="./scripts/form-validation.js" defer></script>
+        <script src="./scripts/script.js" defer></script>
+        <script src="./scripts/enhancements.js" defer></script>
         <title>Job Application</title>
     </head>
-    <body class="apply-pg-body">
+    <body class="apply-pg-body" id="applybody">
     <header>
         <!-- Navbar-->
         <nav class="navbar apply-pg-navbar">
              <ul>
-                 <li>
+                <li>
                 <a href="index.html">Home</a>
                 </li>
                 <li>
@@ -37,7 +45,16 @@
                 <a href="enhancements.html">Enhancements</a>
                 </li>
                 <li>
+                <a href="enhancement2.html">EnhancementJS</a>
+                </li>
+                <li>
                 <a href="apply.html">Apply</a>
+                </li>
+                <li>
+                    <div id="theme-wrapper">
+                        <div  id="light-mode" class="theme-dot"></div>
+                        <div  id="dark-mode" class="theme-dot"></div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -45,7 +62,7 @@
             <h1>ShaCKDART</h1>
         </div>
     </header>
-        <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+        <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" id="apply-form">
         <div class="form-main">
             <div class="job-details">
                 <fieldset>
@@ -56,74 +73,101 @@
                         <p>Job Title:</p>
                         <select name="job-title" id="job-title">
                             <option value="">Please Select</option>
-                            <option value="Jr. System Admin">Jr. System Admin</option>
+                            <option value="Junior System Admin">Junior System Admin</option>
                             <option value="Network Architect">Network Architect</option>
                         </select>
-                    <p>We are happy to know that you are applying.We want you to know that our employees are the jewels of our company.<br> Hope to see you become a part of us.</p>
                 </fieldset>
             </div>
             <div class="personal-details">
                 <fieldset>
                         <legend>Personal Details</legend>
-                        <p><label for="fname">Given Name</label> 
-                                <input type="text" name= "fname" id="fname" pattern=[a-zA-Z]{2,25} required="required"/>
-                                <br>
-                            <label for="gname">Family Name</label> 
-                                <input type="text" name= "gname" id="gname" pattern=[a-zA-Z]{2,25} required="required"/>
-                            <br>
-                            <label for="dob">Date of Birth</label> 
-                                <input type="date" name= "dob" id="dob" required="required"/>    
-                        </p>
-                            <p>Gender:</p>
-                            <input type="radio" name="gender" value="male" id="male" checked="checked">
-                            <label for="male">Male</label>
-                            
-                            <input type="radio" name="gender" id="female" value="female" checked="checked">
-                            <label for="female">Female</label>
+                        <div class="form-control">
+                            <p>
+                                <label for="fname">Given Name</label> 
+                                <input type="text" name= "fname" id="fname" />
+                                <small></small>
+                            </p>
+                        </div>
+                        <div class="form-control">
+                            <p>     
+                                <label for="gname">Family Name</label> 
+                                <input type="text" name= "gname" id="gname"/>
+                                <small></small>
+                            </p>
+                        </div>
+                        <div class="form-control"> 
+                            <p>    
+                                <label for="dob">Date of Birth</label> 
+                                <input type="date" name= "dob" id="dob" required="required"/> 
+                                <small></small>   
+                            </p>
+                        </div> 
+                        <p>Gender:</p>
+                        <input type="radio" name="gender" value="male" id="male" checked="checked">
+                        <label for="male">Male</label>
+                        
+                        <input type="radio" name="gender" id="female" value="female" checked="checked">
+                        <label for="female">Female</label>
                 </fieldset>
             </div>
             <div class="address-details">
                 <fieldset>
                     <legend>Address</legend>
-                    <p>
-                        <label for="street-address">Street Address</label>
-                        <input type="text" id="street-address" name="street-address" pattern="{40}" required="required">
-                        <br>
-                        <label for="suburb/town">Suburb/Town</label>
-                        <input type="text" id="suburb/town" name="suburb/town" pattern="{40}" required="required">
-                        <br>
-                        <label for="postcode">Postcode: </label>
-                        
-                        <input type="text" id="postcode" name="postcode" pattern="\d{4}" placeholder="XXXX" required="required">
-                    </p>
-                    
-                    <p>State:
-                        <select name="state" id="state" required="required">
-                            <option value="">Please Select State</option>
-                            <option value="QLD">QLD</option>
-                            <option value="VIC">VIC</option>
-                            <option value="NSW">NSW</option>
-                            <option value="NT">NT</option>
-                            <option value="WA">WA</option>
-                            <option value="SA">SA</option>
-                            <option value="TAS">TAS</option>
-                            <option value="ACT">ACT</option>
-                        </select>
-                    </p>
-                </fieldset>
-                    
+                       <div class="form-control">
+                            <p>
+                                <label for="street-address">Street Address</label>
+                                <input type="text" id="street-address" name="street-address" required="required">
+                                <small></small>
+                            </p>
+                        </div>
+                        <div class="form-control">
+                            <p>
+                                <label for="suburb/town">Suburb/Town</label>
+                                <input type="text" id="suburb-town" name="suburb/town" required="required">
+                                <small></small>
+                            </p>
+                        </div>
+                        <div class="form-control">
+                            <p>
+                                <label for="postcode">Postcode: </label>
+                                <input type="text" id="postcode" name="postcode" pattern="\d{4}" placeholder="XXXX" required="required">
+                                <small></small>
+                            </p>
+                        </div>
+                    <div class="form-control">
+                        <label>State:</label>
+                            <select name="state" id="state" required="required">
+                                <option value="">Please Select State</option>
+                                <option value="QLD">QLD</option>
+                                <option value="VIC">VIC</option>
+                                <option value="NSW">NSW</option>
+                                <option value="NT">NT</option>
+                                <option value="WA">WA</option>
+                                <option value="SA">SA</option>
+                                <option value="TAS">TAS</option>
+                                <option value="ACT">ACT</option>
+                            </select>
+                            <small></small>
+                    </div>
+                </fieldset>  
             </div>
             <div class="contact-details">
 				<fieldset>    
                     <legend>Additional Information</legend>
-                    <p>
-                        <label for="email">Email: </label>
-                        <input type="email" id="email" name="Email" required="required">
-                    </p>
-                    <p>
-                        <label for="phone">Phone Number: </label>
-                        <input type="text" id="phone" name="phone" pattern="[0-9 ]{8,12}" required="required">
-                    </p>
+                    <div class="form-control">
+                        <p>
+                            <label for="email">Email: </label>
+                            <input type="text" id="email" name="Email" required="required">
+                            <small></small>
+                        </p>
+                    </div>
+                    <div class="form-control">
+                        <p>
+                            <label for="phone">Phone Number: </label>
+                            <input type="text" id="phone" name="phone" required="required">
+                            <small></small>
+                        </p>
+                    </div>
 				</fieldset>
             </div>      
             <div class="skill-details">  
@@ -132,22 +176,34 @@
                     <input type="checkbox" id="programming" name="programming" class="rcheck">
                     <label for="programming"> Programming</label>
 
-                    <input type="checkbox" id="Linux/Unix" name="linux/unix" class="rcheck">
+                    <input type="checkbox" id="linux" name="linux/unix" class="rcheck">
                     <label for="Linux/Unix"> Linux/Unix</label>
 
-                    <input type="checkbox" id="Networking" name="networking" class="rcheck">
+                    <input type="checkbox" id="networking" name="networking" class="rcheck">
                     <label for="Networking"> Networking</label>
 
-                    <input type="checkbox" id="Communication" name="communication" class="rcheck">
+                    <input type="checkbox" id="communication" name="communication" class="rcheck">
                     <label for="Communication"> Communication</label>
 
-                    <p>
-                        <label for="other-skills">Other Skills</label>
-                        <br>
-                        <textarea id="other-skills" name="other-skills" placeholder="List you additional skills here" rows="4" cols="33" required="required"></textarea>
-                    </p> 
+                    <input type="checkbox" id="others" name="others" class="rcheck">
+                    <label for="others"> Others</label>
+                    <div class="form-control"> 
+                        <p>
+                            <label for="other-skills">Other Skills</label>
+                            <br>
+                            <textarea id="other-skills" name="other-skills" placeholder="List you additional skills here" rows="4" cols="33"></textarea>
+                            <small></small>
+                        </p> 
+                    </div>
             </fieldset>
             </div>
+            <small class="final-error"></small>
+            </div>
+            <div class="popup-container" id="popup-container">
+                <div class="popup">
+                    <h1>Timeout Warning</h1>
+                    <p>You Will be Redirected to Homepage in 40 seconds<br>Please Complete your form</p>
+                </div>
             </div>
             <div class="page-btn-wrapper">    
                 <div>

@@ -20,10 +20,12 @@ check comments for page specific styling.
     --secondary-bg:#eed6b2;
     --pink-bg: #CC95C0;
     --blue-bg: #7AA1D2;
+    --text-color:black;
 }
 /*              #########       COMMON STYLING     ########               */
 *{
     box-sizing: border-box;
+    color:var(--text-color);
 }
 body,footer{
     background-color: var(--primary-bg); 
@@ -31,7 +33,7 @@ body,footer{
 /* Working on Navbar*/
 
 .navbar a{
-    color: black;
+    color: var(--text-color);
     background-color: var(--primary-bg);
 }
 .navbar ul{
@@ -41,6 +43,32 @@ body,footer{
 .navbar ul li{
     padding: 20px;
     display: block;
+}
+#theme-wrapper{
+    display: flex;
+    justify-content:center;
+}
+.theme-dot{
+  background-color: black;
+  height : 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+.theme-dot:hover{
+    border-width: 5px;
+    border: solid;
+}
+#light-mode{
+    background-color:#eed6b2 ;
+    border-color:black;
+
+}
+#dark-mode{
+    background-color: black;
+    border-color: white;
+    
 }
 /*Change Navbar element color on hover*/
 nav a:hover{
@@ -69,7 +97,7 @@ footer ul li a{
 }
 /*Color for About Page Footer*/
 .about-footer{
-    background-color:#eed6b2;
+    background-color:var(--secondary-bg);
 }
 
 
@@ -84,10 +112,14 @@ p,a, li, strong,label, h6, dd, dl{
     font-family: 'VT323', monospace;
     font-size: 1.5em;
 }
+small{
+    font-family: 'VT323', monospace;
+    font-size: 0.7em;
+}
 /* Adding style to the link for menu and clickables*/
 a{
     background-color: white;
-    color: black;
+    color: var(--secondary-text-color);
     padding: 0.5em 0.5em;
     text-decoration: none;
     text-transform: uppercase;
@@ -119,7 +151,6 @@ a{
     display: flex;
     justify-content: space-around;
     padding: 50px;
-    background-image: url("../images/bottoms-bg2.jpg");
 }
 img{
     width: 100%;
@@ -164,6 +195,7 @@ img{
     grid-gap: 10px;
     grid-row-gap: 20px;
 }
+
 /*setting grid area*/
 .text-wrapper{
     /*border: 2px solid yellow;*/
@@ -180,15 +212,14 @@ img{
     padding-left: 170px;
     align-items: center;
     grid-area: pos1-intro;
-    background:#eed6b2;
+    background:var(--primary-bg);
 }
 .p2-intro{
     /*border: 2px solid blue;*/
     padding: 50px;
     grid-area: pos2-intro;
     padding-left: 170px;
-
-    background:#eed6b2;
+    background:var(--primary-bg);
 }
 .p1-des{
     padding: 50px;
@@ -207,41 +238,22 @@ img{
 .p1-eskills{
     grid-area: p1-eskills;
     padding: 50px;
-    background:#eed6b2;
+    background:var(--primary-bg);
 }
 .p1-preskills{
     grid-area: p1-preskills;
     padding: 50px;
-    background:#eed6b2;
+    background:var(--primary-bg);
 }
 .p2-eskills{
     grid-area: p2-eskills;
     padding: 50px;
-    background:#eed6b2;
+    background:var(--primary-bg);
 }
 .p2-preskills{
     grid-area:p2-preskills;
     padding: 50px;
-    background:#eed6b2;
-}
-
-.benefit-wrapper{
-    background: var(--secondary-bg);
-    width: 25%;
-    height: 25%;
-    padding: 50px;
-    margin: 10px;
-    float: right;
-    
-}
-.branches{
-    background: var(--secondary-bg);
-    width: 25%;
-    height: 25%;
-    margin: 10px;
-    padding:50px;
-    float: left;
-    
+    background:varvar(--primary-bg);
 }
 
 /*footer{
@@ -252,8 +264,8 @@ img{
 
 /*Common button styling*/
 .apply-btn{
-    background-color: black;
-    color: var(--primary-bg);
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
     padding: 0.5em 0.5em;
     text-decoration: none;
     text-transform: uppercase;
@@ -262,8 +274,8 @@ img{
 }
 /*Common button styling*/
 .home-btn,.submit-btn,.reset-btn{
-    background-color: black;
-    color: var(--primary-bg);
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
     padding: 0.5em 0.5em;
     text-decoration: none;
     text-transform: uppercase;
@@ -285,7 +297,7 @@ label{
 }
 input{
     line-height: 2.7em;
-    background:#eed6b2 ;
+    background:var(--primary-bg);
 }
 .mega-intro:hover{
     font-size: 1.5em;
@@ -299,7 +311,7 @@ input{
 }
 .form-main{
     padding: 30px;
-    background: var(--mainGradient);
+    background: var(--secondary-bg);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -315,7 +327,7 @@ legend:hover{
     transition: font-size .7s;
 }
 fieldset{
-    border: 2px solid #4B1248;
+    border: 2px solid black;
 }
 /*Setting Grid Area*/
 .job-details{
@@ -340,7 +352,7 @@ fieldset{
     padding: 50px;
     display: flex;
     justify-content: center;
-    background-color: #CC95C0;
+
 }
 .submit-btn{
     display: block;
@@ -355,58 +367,50 @@ fieldset{
     background-color: darkred;
     transition: background-color .7s;
 }
-
-/*Responsive Web Design using media-query*/
-@media screen and (max-width:800px){
-    .form-main{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-        grid-template-areas:
-        'job-details'
-        'personal-details'
-        'address-details'
-        'contact-details'
-        'skill-details'
-    }
-    .mega-intro{
-        padding:0;
-        font-size: 1em;
-    }
-    .apply-pg-navbar li{
-        font-size:1em;
-        padding:0;
-        display: inline-block;
-    }
-    .apply-pg-navbar ul{
-        padding: 0;
-        margin:0;
-        display: inline-block;
-    }
-    .page-btn-wrapper{
-        display: block;
-    }
-    .submit-btn{
-        margin-right: 50px;
-    }
-    .reset-btn{
-        margin-left: 45px;
-    }
-    .apply-footer ul{
-        display: inline-block;
-        max-width: 50%;
-    }
-    .apply-footer ul li{
-        padding: 0;
-        padding-top:0;
-    }
+.form-control.error input{
+    border-color: darkred;
+}
+.form-control.error small{
+    color: darkred;
+}
+.form-control.success input{
+    border-color: darkgreen;
+}
+.final-error{
+    color:darkred;
+    border-style: ridge;
+    border-color: darkred;
+    visibility: hidden;
+    align-content: center;
+}
+.popup-container{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.5);
     
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.popup-container.active{
+    display: flex;
+    z-index: 1;
+}
+.popup{
+    background:var(--primary-bg);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    width: 500px;
+    position: relative;
 }
 
+
+
                         /*###### STYLING ABOUT ME PAGE########*/
-
-
-
 
 .about-main{
     display: flex;
@@ -448,18 +452,20 @@ fieldset{
     transition: background-color .7s;
 }
 .ceo-wrapper{
-    background-color: #eed6b2;
+    background-color: var(--secondary-bg);
     transition: background-color .7s;
     padding: 50px;
 }
 /* Styling Time Table*/
 .timetable{
     padding: 50px;
-    padding-left: 200px;
+    padding-left: 10%;
+    width: 100%;
 }
 table{
     border: 2px solid black;
     border-collapse: collapse;
+    width: 100%;
 }
 tr,td{
     border: 2px solid black;
@@ -482,7 +488,7 @@ td:hover{
 .enhance-wrapper{
     display: block;
     justify-content: space-evenly;
-    padding: 50px;;
+    padding: 50px;
 }
 .enhance-wrapper img{
     width:20%;
@@ -528,6 +534,110 @@ td:hover{
     background-color: var(--primary-bg);
     margin:100px; 
 }
-.first-row-wrapper img:hover{
+/*    ENHANCEMENT 2 PAGE STYLES      */
+.card {
+    margin: 100px auto 0 ;
+    width: 800px;
+    height: 50%;
+    display: flex;
+    justify-content:space-evenly;
+}
+.card1{
+    background-color: var(--blue-bg);
+    border: 2px solid var(--blue-bg);
+    transform: translateX(-50px);
+    padding: 100px 50px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.3);
+}
+.card2{
+    background-color: var(--blue-bg);
+    border: 2px solid var(--blue-bg);
+    transform: translateX(30px);
+    padding:100px 50px;  
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.3);
+ 
+}
 
+/*Responsive Web Design using media-query*/
+
+@media screen and (max-width:800px){
+    .form-main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+        'job-details'
+        'personal-details'
+        'address-details'
+        'contact-details'
+        'skill-details'
+    }
+    .main-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+        'text-wrapper'
+        'pos1-intro'
+        'p1-des'
+        'p1-eskills'
+        'p1-preskills'
+        'pos2-intro'
+        'p2-des'
+        'p2-eskills'
+        'p2-preskills'
+    }
+    .mega-intro{
+        padding:0;
+        font-size: 1em;
+    }
+    .navbar li{
+        font-size:1em;
+        padding:0;
+        display: inline-block;
+    }
+    .navbar ul{
+        padding: 0;
+        margin:0;
+        display: inline-block;
+    }
+    .page-btn-wrapper{
+        display: block;
+    }
+    .submit-btn{
+        margin-right: 50px;
+    }
+    .reset-btn{
+        margin-left: 45px;
+    }
+    .apply-footer ul{
+        display: inline-block;
+        max-width: 50%;
+    }
+    .apply-footer ul li{
+        padding: 0;
+        padding-top:0;
+    }
+    .about-main{
+        display: inline-block;
+    }
+    .timtable table{
+        max-width: 30em;
+    }
+    .card {
+        margin:0;
+        width: 100%;
+        height: 50%;
+        display: block;
+        justify-content: space-between;
+    }
+    .card1{
+        padding:0;
+        transform: translateX(0);
+    }
+    .card2{
+        padding:0;
+        transform: translateX(0);
+
+    }
 }

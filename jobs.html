@@ -2,10 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="Assignment 1" />
+        <meta name="keywords" content="HTML, CSS" />
+        <meta name="author" content="s103494172"  />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Linking my css file. Keep in same folder for it to work-->
         <link rel="stylesheet" type="text/css" href="./styles/style.css">
+        <link rel="stylesheet" id="theme-style" href="">
+
         <!--Adding fonts from google fonts-->
         <!--FONT VT32-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,9 +24,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+
+        <!-- Link to Javascripts -->
+        <script src="./scripts/enhancements.js" defer></script>
+        <script src="./scripts/script.js" defer></script>
         <title>Job Lisitings</title>
     </head>
-    <body>
+    <body id="jobsbody">
     <header>
         <!-- Navbar-->
         <nav class="navbar">
@@ -39,7 +48,16 @@
                 <a href="enhancements.html">Enhancements</a>
                 </li>
                 <li>
+                <a href="enhancement2.html">EnhancementJS</a>
+                </li>
+                <li>
                 <a href="apply.html">Apply</a>
+                </li>
+                <li>
+                    <div id="theme-wrapper">
+                        <div  id="light-mode" class="theme-dot"></div>
+                        <div  id="dark-mode" class="theme-dot"></div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -56,25 +74,25 @@
         
             <section class="p1-intro">
                 <h4>Network Architect</h4>
-                <p><strong>Ref No. A103B49C41</strong></p>  
+                <p><strong>Ref No. AX39B</strong></p>  
                 <p>Salary Range: 75k-100k AUD</p> 
                 <div>
                     <br>
-                    <a class="apply-btn"  href="apply.html">Apply!</a>
+                    <a class="apply-btn" id="job1-apply" href="apply.html">Apply!</a>
                 </div> 
             </section>
             <section class="p2-intro">
                 <h4>Junior System Administrator</h4>
-                <p><strong>Ref No. D103E49F41</strong></p>
+                <p><strong>Ref No. B6Z20</strong></p>
                 <p>Salary Range: 70k-80k AUD</p>
                 <div>
                     <br>
-                    <a class="apply-btn" href="apply.html">Apply!</a>
+                    <a class="apply-btn" id="job2-apply" href="apply.html">Apply!</a>
                 </div>
             </section>
             <section class="p1-des">
                 <h3>Network Architect</h3>
-                <p><em>Ref No. A103B49C41</em></p>
+                <p><em>Ref No. AX39B</em></p>
                 <article>
                     <h6>The primary role of Network architect is to maintain our uptime and infrastructure.Make network exansions and routine maintainence. Since we provide security solutions we expect our network architects to build and maintain networks with highest Security priority in mind.</h6>
                 </article>
@@ -89,6 +107,7 @@
             </section>
             <section class="p2-des">
                 <h3>Jr. System Administrator</h3>
+                <p><em>Ref No. B6Z20</em></p>
                 <p>Salary Range: 70k-85 AUD</p>
                 <p><strong>Qualifications</strong></p>
                 <ul>
@@ -136,26 +155,6 @@
                 </ol>
             </section>
         </div> 
-        <div class="useless-wrapper">
-            <aside class="benefit-wrapper">
-                <h4>Benefits of Working With Us.</h4>
-                <ul>
-                    <li>Unlimited PTO</li>
-                    <li>Free Netflix, Amazon Prime Subscriptions</li>
-                    <li>Daily Buffet at Lunch</li>
-                    <li>Tesla Giveaway on 10 year employment anniversary</li>
-
-                </ul>
-            </aside>
-            <aside class="branches">
-                <h4>Our branches and you!</h4>
-                <ul>
-                    <li>Offices at Australia, Sweden and UK</li>
-                    <li>After 3 years of working with us you can choose to move to any of our branches</li>
-                    <li>**Moving is subject to VISA attainment</li>
-                </ul>
-            </aside>
-        </div>  
             <div class="jobs-btn-wrapper">
                 <div>
                     <br>

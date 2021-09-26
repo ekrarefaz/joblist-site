@@ -1,0 +1,27 @@
+:root{
+    /*Pre-made Gradients from  https://uigradients.com*/
+    --mainGradient: linear-gradient(to top, #16222a, #3a6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*Pre-made Gradients from  https://uigradients.com*/
+    --secondaryGradient:linear-gradient(to right, #485563, #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --primary-bg:black;
+    --secondary-bg:#29323c;
+    --text-color: white;
+    --secondary-text-color:black;
+    --pink-bg: #29323c;
+    --blue-bg: #485563;
+}
+/*:root{
+    /*Setting Variables for easier code-reuse and color changing*/
+
+    /*Pre-made Gradients from  https://uigradients.com*/
+    /*--mainGradient: linear-gradient(to top, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*--fallBackGradient: -webkit-linear-gradient(to bottom, #99a1aa, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+    /*Pre-made Gradients from  https://uigradients.com*/
+    /*--secondaryGradient:linear-gradient(to top, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*--secondaryFallbackG: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
+    
+    /*--primary-bg:beige;
+    --secondary-bg:#eed6b2;
+    --pink-bg: #CC95C0;
+    --blue-bg: #7AA1D2;
+}*/
